@@ -9,7 +9,10 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    //@Query UserModel
+    //@Query private var UserProfile: [UserProfile]
+    @Environment(\.modelContext) var myUserProfile
+    
+    
     var myArray: [Int] = []
     @State private var navigate = false
     @State private var showingPreviousProfiles = false

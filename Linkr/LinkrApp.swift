@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct LinkrApp: App {
@@ -13,5 +14,6 @@ struct LinkrApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: UserModel.self)
     }
 }
