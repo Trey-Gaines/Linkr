@@ -16,6 +16,11 @@
 		2DDBC3EE2BC6B067008171F9 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3ED2BC6B067008171F9 /* CreateProfileView.swift */; };
 		2DDBC3F02BC6B096008171F9 /* ProfileDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3EF2BC6B096008171F9 /* ProfileDisplay.swift */; };
 		2DDBC3F22BC6B40B008171F9 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3F12BC6B40B008171F9 /* ObservableObject.swift */; };
+		2DDBC3F42BC7EF59008171F9 /* Welcome&Info(1).swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3F32BC7EF59008171F9 /* Welcome&Info(1).swift */; };
+		2DDBC3F62BC7F308008171F9 /* PersonalInfo(2).swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3F52BC7F308008171F9 /* PersonalInfo(2).swift */; };
+		2DDBC3FA2BC7F760008171F9 /* CommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3F92BC7F760008171F9 /* CommonButtonView.swift */; };
+		2DDBC3FC2BC7F952008171F9 /* AccountLink(3).swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3FB2BC7F952008171F9 /* AccountLink(3).swift */; };
+		2DDBC3FE2BC8010D008171F9 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBC3FD2BC8010D008171F9 /* PhotoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		2DDBC3ED2BC6B067008171F9 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		2DDBC3EF2BC6B096008171F9 /* ProfileDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplay.swift; sourceTree = "<group>"; };
 		2DDBC3F12BC6B40B008171F9 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		2DDBC3F32BC7EF59008171F9 /* Welcome&Info(1).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Welcome&Info(1).swift"; sourceTree = "<group>"; };
+		2DDBC3F52BC7F308008171F9 /* PersonalInfo(2).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfo(2).swift"; sourceTree = "<group>"; };
+		2DDBC3F92BC7F760008171F9 /* CommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtonView.swift; sourceTree = "<group>"; };
+		2DDBC3FB2BC7F952008171F9 /* AccountLink(3).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountLink(3).swift"; sourceTree = "<group>"; };
+		2DDBC3FD2BC8010D008171F9 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,8 @@
 				2DDBC3E42BC6A239008171F9 /* UserModel.swift */,
 				2DDBC3F12BC6B40B008171F9 /* ObservableObject.swift */,
 				2DDBC3E62BC6A335008171F9 /* Main */,
+				2DDBC3F72BC7F314008171F9 /* Onboard */,
+				2DDBC3F82BC7F746008171F9 /* Extras */,
 				2DDBC3DA2BC5F7D2008171F9 /* Assets.xcassets */,
 				2DDBC3DC2BC5F7D2008171F9 /* Preview Content */,
 			);
@@ -88,6 +100,25 @@
 				2DDBC3EF2BC6B096008171F9 /* ProfileDisplay.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		2DDBC3F72BC7F314008171F9 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBC3F32BC7EF59008171F9 /* Welcome&Info(1).swift */,
+				2DDBC3F52BC7F308008171F9 /* PersonalInfo(2).swift */,
+				2DDBC3FB2BC7F952008171F9 /* AccountLink(3).swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		2DDBC3F82BC7F746008171F9 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBC3F92BC7F760008171F9 /* CommonButtonView.swift */,
+				2DDBC3FD2BC8010D008171F9 /* PhotoPickerView.swift */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +193,12 @@
 			files = (
 				2DDBC3D92BC5F7D1008171F9 /* ContentView.swift in Sources */,
 				2DDBC3E52BC6A239008171F9 /* UserModel.swift in Sources */,
+				2DDBC3F62BC7F308008171F9 /* PersonalInfo(2).swift in Sources */,
+				2DDBC3FA2BC7F760008171F9 /* CommonButtonView.swift in Sources */,
 				2DDBC3EC2BC6AD2E008171F9 /* ProfileView.swift in Sources */,
+				2DDBC3F42BC7EF59008171F9 /* Welcome&Info(1).swift in Sources */,
+				2DDBC3FC2BC7F952008171F9 /* AccountLink(3).swift in Sources */,
+				2DDBC3FE2BC8010D008171F9 /* PhotoPickerView.swift in Sources */,
 				2DDBC3D72BC5F7D1008171F9 /* LinkrApp.swift in Sources */,
 				2DDBC3F22BC6B40B008171F9 /* ObservableObject.swift in Sources */,
 				2DDBC3F02BC6B096008171F9 /* ProfileDisplay.swift in Sources */,
