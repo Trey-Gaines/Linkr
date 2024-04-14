@@ -9,36 +9,54 @@ import SwiftUI
 import PhotosUI
 
 struct AccountLink: View {
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
+    @State private var twitterButton: Bool = false
+    @State private var intagramButton: Bool = false
+    @State private var facebookButton: Bool = false
+    @State private var youtubeButton: Bool = false
+    @State private var twitchButton: Bool = false
+    @State private var tiktokButton: Bool = false
+    @State private var redditButton: Bool = false
+    @State private var snapchatButton: Bool = false
+    @State private var pintrestButton: Bool = false
+    @State private var discordButton: Bool = false
+    @State private var spotifyButton: Bool = false
+    @State private var randomButtonA: Bool = false
+    @State private var randomButtonB: Bool = false
+    @State private var randomLinkC: Bool = false
+    
     var body: some View {
-        PhotoPickerView()
-            .padding(25)
-        TextField("What's your first name?", text: $firstName)
-                    .padding(10)
-                    .cornerRadius(10)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 350)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .padding(.bottom, 5)
-                    
-        
-        TextField("What's your kast name?", text: $lastName)
-                    .padding(10)
-                    .cornerRadius(10)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 350)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    
+        Spacer()
+        Text("Click the items you want to link")
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: [GridItem(.flexible())]) {
+                ForEach(AccountLink.colors, id: \.self) {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill($0)
+                        .frame(width: 100, height: 100)
+                }
+            }
+        }
+        Spacer()
     }
 }
 
 #Preview {
     AccountLink()
+        .environment(appModel())
+}
+
+
+
+
+extension AccountLink {
+    static var colors: [Color] {
+        var myArray: [Color] = []
+        for _ in 0..<13 {
+            let red = Double.random(in: 0...1)
+            let green = Double.random(in: 0...1)
+            let blue = Double.random(in: 0...1)
+            myArray.append(Color(red: red, green: green, blue: blue))
+        }
+        return myArray
+    }
 }

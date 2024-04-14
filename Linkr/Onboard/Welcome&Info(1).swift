@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Welcome_Info: View {
     var body: some View {
+        @Environment(appModel.self) var globalModel: appModel?
+        
         NavigationStack {
             Label("Linkr", systemImage: "link.icloud")
                 .fontWeight(.semibold)
@@ -22,7 +24,8 @@ struct Welcome_Info: View {
                 .multilineTextAlignment(.center)
             
             CommonButtonView(title: "Create a new you") {
-                PersonalInfo() //Use button to navigate to next screen
+                PersonalInfo(globalModel: appModel())
+                //Use button to navigate to next screen
             }
         }
     }
@@ -30,4 +33,5 @@ struct Welcome_Info: View {
 
 #Preview {
     Welcome_Info()
+        .environment(appModel())
 }

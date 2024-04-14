@@ -9,26 +9,45 @@ import SwiftUI
 import PhotosUI
 
 struct PhotoPickerView: View {
-    @State var myImage: PhotosPickerItem?
-    @State var myImageConverted: UIImage?
+    @Bindable var globalModel: appModel
     
     var body: some View {
         VStack {
-            PhotosPicker(selection: $myImage, matching: .images) {
-                Label("Select your Profile Photo", systemImage: "photo.fill")
+            PhotosPicker(selection: $globalModel.myImage, matching: .images) {
+                if let convertedImage = globalModel.myImageConverted {
+                    Image(uiImage: convertedImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 325, height: 325)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                } else {
+                    Label("Select your Profile Photo", systemImage: "photo.fill")
+                        .frame(width: 300, height: 300)
+                        .offset(y: 145)
+                }
             }
+            .frame(width: 300, height: 300)
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(.gray, lineWidth: 1)
-                    .frame(width: 300, height: 300, alignment: .top)
-                    .offset(y: -125)
-                    .padding()
             )
+        }
+        .onChange(of: globalModel.myImage) { _, _ in
+            Task {
+                if let itemChosen = globalModel.myImage,
+                   let myData = try? await itemChosen.loadTransferable(type: Data.self) {
+                    if let myConvertedImage = UIImage(data: myData) {
+                        globalModel.myImageConverted = myConvertedImage
+                    }
+                }
+            }
         }
     }
 }
 
 #Preview {
-    PhotoPickerView()
+    PhotoPickerView(globalModel: appModel())
+    //.environment(appModel())
 }

@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    //Marked as optional to avoid crash. The environment has to be injected for functionality.
+    @Environment(appModel.self) private var globalModel: appModel?
     //@Query private var UserProfile: [UserProfile]
     @Environment(\.modelContext) var myUserProfile
     
@@ -61,4 +63,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(appModel())
 }

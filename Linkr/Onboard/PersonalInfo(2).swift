@@ -8,15 +8,45 @@
 import SwiftUI
 
 struct PersonalInfo: View {
+    @Bindable var globalModel: appModel
+    
+    
+    
     var body: some View {
         NavigationStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Spacer()
+            Spacer()
+            PhotoPickerView(globalModel: appModel())
+                .padding(25)
+            TextField("What's your first name?", text: $globalModel.first)
+                        .padding(10)
+                        .cornerRadius(10)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 350)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom, 5)
+                        
             
-            CommonButtonView(title: "Add some accounts", destination: { PersonalInfo() })
+            TextField("What's your kast name?", text: $globalModel.last)
+                        .padding(10)
+                        .cornerRadius(10)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 350)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+            
+            CommonButtonView(title: "Add some accounts", destination: { AccountLink() })
+                .padding()
+            Spacer()
         }
     }
 }
 
 #Preview {
-    PersonalInfo()
+    PersonalInfo(globalModel: appModel())
 }

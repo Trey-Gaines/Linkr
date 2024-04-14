@@ -72,9 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDBC3D62BC5F7D1008171F9 /* LinkrApp.swift */,
-				2DDBC3D82BC5F7D1008171F9 /* ContentView.swift */,
-				2DDBC3E42BC6A239008171F9 /* UserModel.swift */,
-				2DDBC3F12BC6B40B008171F9 /* ObservableObject.swift */,
+				2DDBC3FF2BCC3153008171F9 /* Data */,
 				2DDBC3E62BC6A335008171F9 /* Main */,
 				2DDBC3F72BC7F314008171F9 /* Onboard */,
 				2DDBC3F82BC7F746008171F9 /* Extras */,
@@ -95,6 +93,7 @@
 		2DDBC3E62BC6A335008171F9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2DDBC3D82BC5F7D1008171F9 /* ContentView.swift */,
 				2DDBC3EB2BC6AD2E008171F9 /* ProfileView.swift */,
 				2DDBC3ED2BC6B067008171F9 /* CreateProfileView.swift */,
 				2DDBC3EF2BC6B096008171F9 /* ProfileDisplay.swift */,
@@ -115,10 +114,19 @@
 		2DDBC3F82BC7F746008171F9 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				2DDBC3F92BC7F760008171F9 /* CommonButtonView.swift */,
 				2DDBC3FD2BC8010D008171F9 /* PhotoPickerView.swift */,
+				2DDBC3F92BC7F760008171F9 /* CommonButtonView.swift */,
 			);
 			path = Extras;
+			sourceTree = "<group>";
+		};
+		2DDBC3FF2BCC3153008171F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBC3E42BC6A239008171F9 /* UserModel.swift */,
+				2DDBC3F12BC6B40B008171F9 /* ObservableObject.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
