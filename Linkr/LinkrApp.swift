@@ -10,12 +10,15 @@ import SwiftData
 
 @main
 struct LinkrApp: App {
-    
+    //Grab user preference, set inside globalObject for color theme, change AppStorage UserDefaults
     @State private var globalObject = appModel() //Global Object
+    
+    
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .background(Color("myColor"))
         }
         .modelContainer(for: UserModel.self)
         .environment(globalObject) //Environment rather than EnvironmentObject

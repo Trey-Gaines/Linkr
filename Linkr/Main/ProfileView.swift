@@ -29,7 +29,7 @@ struct ProfileView: View {
                 }
             }
             .fullScreenCover(isPresented: $navigate) {
-                CreateProfileView()
+                Welcome_Info()
             }
         }
     }

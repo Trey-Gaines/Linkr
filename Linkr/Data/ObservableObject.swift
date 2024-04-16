@@ -10,14 +10,14 @@ import Observation
 import PhotosUI
 import _PhotosUI_SwiftUI
 
+
+
 @Observable
 class appModel {
     var currentIndex: Int?
     var progressTrack: Int?
     var shareMainViewChange: Int?
-    
-    
-    
+    var visualModeLight: Bool = true
     
     //Things for UserModel
     public var first: String = ""
@@ -40,5 +40,7 @@ class appModel {
     public var randomLinkA: String = ""
     public var randomLinkB: String = ""
     public var randomLinkC: String = ""
-        
+    
+    
+    //Funcs
 }

@@ -23,7 +23,7 @@ struct CommonButtonView<Destination: View>: View {
             Text(self.title)
                 .foregroundColor(.white)
                 .padding()
-                .background(Color.black)
+                .background(Color.accentColor)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .frame(width: 200)
         }

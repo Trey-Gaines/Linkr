@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 struct ContentView: View {
     //Marked as optional to avoid crash. The environment has to be injected for functionality.
     @Environment(appModel.self) private var globalModel: appModel?
@@ -40,9 +41,14 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                Text("Linkr")
-                    .font(.title)
-                    .fontWeight(.semibold)
+                Button {
+                    globalModel?.visualModeLight.toggle()
+                } label: {
+                    Text("Linkr")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+                
             }
             .frame(height: 44)
             Spacer()
@@ -57,6 +63,9 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showingPreviousProfiles) {
             Text("Yes")
+        }
+        .onChange(of: globalModel?.visualModeLight) {
+            
         }
     }
 }
