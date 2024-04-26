@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct CreateProfileView: View {
+struct PickProfileView: View {
+    @Environment(\.dismiss) var dismiss //To dismiss itself as sheet
+    
     var body: some View {
         Text("Welcome")
     }
 }
 
 #Preview {
-    CreateProfileView()
+    PickProfileView()
 }

@@ -12,8 +12,10 @@ import SwiftData
 struct ContentView: View {
     //Marked as optional to avoid crash. The environment has to be injected for functionality.
     @Environment(appModel.self) private var globalModel: appModel?
-    //@Query private var UserProfile: [UserProfile]
     @Environment(\.modelContext) var myUserProfile
+    @Query(
+        //sort: \.timestamp
+        ) private var items: [UserModel]
     
     
     var myArray: [Int] = []
@@ -61,12 +63,13 @@ struct ContentView: View {
                     .font(.title3)
             }
         }
-        .sheet(isPresented: $showingPreviousProfiles) {
-            Text("Yes")
-        }
-        .onChange(of: globalModel?.visualModeLight) {
-            
-        }
+        .sheet(isPresented: $showingPreviousProfiles, content: {
+            NavigationStack {
+                PickProfileView()
+            }
+            .presentationDetents([.medium]) //Brings the screen to less than halfway
+        })
+        
     }
 }
 

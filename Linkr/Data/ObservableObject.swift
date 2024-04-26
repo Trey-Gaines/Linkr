@@ -11,9 +11,18 @@ import PhotosUI
 import _PhotosUI_SwiftUI
 
 
+struct customLinkr { //Struct for the user to create custom links in their digital profile
+    public var myImage: PhotosPickerItem?
+    public var myImageConverted: UIImage?
+    public var myLink: String = ""
+    public var myLinkName: String = ""
+}
+
+
 
 @Observable
 class appModel {
+    //Things for onboard/setup
     var currentIndex: Int?
     var progressTrack: Int?
     var shareMainViewChange: Int?
@@ -25,7 +34,7 @@ class appModel {
     public var myImage: PhotosPickerItem?
     public var myImageConverted: UIImage?
     
-    //Links
+    //Default Link Information located in horizontal scrollview below user name, image, aspiration/career
     public var twitterLink: String = ""
     public var intagramLink: String = ""
     public var facebookLink: String = ""
@@ -37,9 +46,8 @@ class appModel {
     public var pintrestLink: String = ""
     public var discordLink: String = ""
     public var spotifyLink: String = ""
-    public var randomLinkA: String = ""
-    public var randomLinkB: String = ""
-    public var randomLinkC: String = ""
+    
+    //Custom Links
     
     
     //Funcs

@@ -20,7 +20,7 @@ struct LinkrApp: App {
             ContentView()
                 .background(Color("myColor"))
         }
-        .modelContainer(for: UserModel.self)
+        .modelContainer(for: UserModel.self) //Container for App's UserModel 
         .environment(globalObject) //Environment rather than EnvironmentObject
     }
 }

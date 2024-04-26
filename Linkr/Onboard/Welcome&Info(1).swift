@@ -12,6 +12,7 @@ struct Welcome_Info: View {
         @Environment(appModel.self) var globalModel: appModel?
         
         NavigationStack {
+            Spacer()
             Label("Linkr", systemImage: "link.icloud")
                 .fontWeight(.semibold)
                 .font(.title)
@@ -27,6 +28,8 @@ struct Welcome_Info: View {
                 PersonalInfo(globalModel: appModel())
                 //Use button to navigate to next screen
             }
+            Spacer()
+            LoadingCap(progress: 0.0)
         }
     }
 }

@@ -30,7 +30,19 @@ struct PersonalInfo: View {
                         .padding(.bottom, 5)
                         
             
-            TextField("What's your kast name?", text: $globalModel.last)
+            TextField("What's your last name?", text: $globalModel.last)
+                        .padding(10)
+                        .cornerRadius(10)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 350)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
+                        .padding(.bottom)
+            
+            
+            TextField("What's your aspiration or title?", text: $globalModel.last)
                         .padding(10)
                         .cornerRadius(10)
                         .multilineTextAlignment(.center)
@@ -43,6 +55,7 @@ struct PersonalInfo: View {
             CommonButtonView(title: "Add some accounts", destination: { AccountLink() })
                 .padding()
             Spacer()
+            LoadingCap(progress: 0.2)
         }
     }
 }

@@ -9,9 +9,10 @@ import Foundation
 import SwiftData
 
 @Model
-class UserModel {
-    var firstName: String = ""
-    var lastName: String = ""
+final class UserModel {
+    var timestamp: Date
+    var firstName: String
+    var lastName: String
     var imageData: Data?
     var spotifyInfo: String?
     var tiktokInfo: String?
@@ -21,7 +22,8 @@ class UserModel {
     var twitchInfo: String?
     
     
-    init(firstName: String, lastName: String) {
+    init(firstName: String, lastName: String, timestamp: Date = .now) {
+        self.timestamp = timestamp
         self.firstName = firstName
         self.lastName = lastName
     }

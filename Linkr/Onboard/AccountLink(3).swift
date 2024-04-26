@@ -37,6 +37,7 @@ struct AccountLink: View {
             }
         }
         Spacer()
+        LoadingCap(progress: 0.4)
     }
 }
 
