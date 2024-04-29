@@ -11,7 +11,6 @@ struct PersonalInfo: View {
     @Bindable var globalModel: appModel
     
     
-    
     var body: some View {
         NavigationStack {
             Spacer()
@@ -42,7 +41,7 @@ struct PersonalInfo: View {
                         .padding(.bottom)
             
             
-            TextField("What's your aspiration or title?", text: $globalModel.last)
+            TextField("What's your aspiration or title?", text: $globalModel.description)
                         .padding(10)
                         .cornerRadius(10)
                         .multilineTextAlignment(.center)
@@ -52,7 +51,7 @@ struct PersonalInfo: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
             
-            CommonButtonView(title: "Add some accounts", destination: { AccountLink() })
+            CommonButtonView(title: "Personalize", destination: { PickUserColor() })
                 .padding()
             Spacer()
             LoadingCap(progress: 0.2)

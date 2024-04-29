@@ -43,14 +43,10 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                Button {
-                    globalModel?.visualModeLight.toggle()
-                } label: {
-                    Text("Linkr")
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-                
+                Text("Linkr")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.accentColor)
             }
             .frame(height: 44)
             Spacer()

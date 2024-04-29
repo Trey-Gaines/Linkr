@@ -36,8 +36,10 @@ struct AccountLink: View {
                 }
             }
         }
+        CommonButtonView(title: "Add some personal links", destination: { PersonalLinks() })
+            .padding()
         Spacer()
-        LoadingCap(progress: 0.4)
+        LoadingCap(progress: 0.45)
     }
 }
 

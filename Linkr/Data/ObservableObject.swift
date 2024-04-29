@@ -8,6 +8,7 @@
 import Foundation
 import Observation
 import PhotosUI
+import UIKit
 import _PhotosUI_SwiftUI
 
 
@@ -31,7 +32,9 @@ class appModel {
     //Things for UserModel
     public var first: String = ""
     public var last: String = ""
+    public var description: String = ""
     public var myImage: PhotosPickerItem?
+    public var myImageData: Data?
     public var myImageConverted: UIImage?
     
     //Default Link Information located in horizontal scrollview below user name, image, aspiration/career
@@ -50,5 +53,4 @@ class appModel {
     //Custom Links
     
     
-    //Funcs
 }

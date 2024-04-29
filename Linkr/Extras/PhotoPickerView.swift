@@ -40,6 +40,7 @@ struct PhotoPickerView: View {
                    let myData = try? await itemChosen.loadTransferable(type: Data.self) {
                     if let myConvertedImage = UIImage(data: myData) {
                         globalModel.myImageConverted = myConvertedImage
+                        globalModel.myImageData = convertImageToJPEGData(image: myConvertedImage, compressionQuality: 1)
                     }
                 }
             }
@@ -50,4 +51,10 @@ struct PhotoPickerView: View {
 #Preview {
     PhotoPickerView(globalModel: appModel())
     //.environment(appModel())
+}
+
+extension PhotoPickerView {
+    private func convertImageToJPEGData(image: UIImage, compressionQuality: CGFloat = 1.0) -> Data? {
+        return image.jpegData(compressionQuality: compressionQuality)
+    }
 }
